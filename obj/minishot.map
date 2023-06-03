@@ -18,38 +18,38 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000000  l__INITIALIZER                  
      00000000  s__CABS                         
      00000000  s__DABS                         
-     00000660  l__CODE                         
+     0000064B  l__CODE                         
      00004000  s__CODE                         
-     00004660  s__DATA                         
-     00004660  s__GSFINAL                      
-     00004660  s__GSINIT                       
-     00004660  s__HOME                         
-     00004660  s__INITIALIZED                  
-     00004660  s__INITIALIZER                  
+     0000464B  s__DATA                         
+     0000464B  s__GSFINAL                      
+     0000464B  s__GSINIT                       
+     0000464B  s__HOME                         
+     0000464B  s__INITIALIZED                  
+     0000464B  s__INITIALIZER                  
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE                               00004000    00000660 =        1632. bytes (REL,CON)
+_CODE                               00004000    0000064B =        1611. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00004000  _sp_player_ship                    nave
      00004460  _sp_ovni                           ovni
      00004520  _g_palette                         g_palette
-     00004530  _main                              main
-     00004563  _cpct_setPalette                   cpct_video
-     0000457A  _cpct_setPALColour                 cpct_video
-     00004586  _cpct_drawSprite                   cpct_sprites
-     0000462B  _cpct_setVideoMode                 cpct_video
-     00004639  _cpct_disableFirmware              cpct_firmware
-     00004639  _cpct_removeInterruptHandler       cpct_firmware
-     00004639  cpct_disableFirmware_asm           cpct_firmware
-     00004639  cpct_removeInterruptHandler_asm    cpct_firmware
-     00004649  _cpct_mode_rom_status              cpct_firmware
-     0000464A  _cpct_getScreenPtr                 cpct_video
+     00004530  _main                              cpct_keyboard
+     0000455E  cpct_setPalette_asm                cpct_video
+     00004571  cpct_setPALColour_asm              cpct_video
+     0000457B  cpct_drawSprite_asm                cpct_sprites
+     0000461B  cpct_setVideoMode_asm              cpct_video
+     00004628  _cpct_disableFirmware              cpct_firmware
+     00004628  _cpct_removeInterruptHandler       cpct_firmware
+     00004628  cpct_disableFirmware_asm           cpct_firmware
+     00004628  cpct_removeInterruptHandler_asm    cpct_firmware
+     00004638  _cpct_mode_rom_status              cpct_firmware
+     00004639  cpct_getScreenPtr_asm              cpct_video
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 
@@ -58,25 +58,25 @@ Files Linked                              [ module(s) ]
 obj/sprites/nave.rel                      [ nave ]
 obj/sprites/ovni.rel                      [ ovni ]
 obj/sprites/g_palette.rel                 [ g_palette ]
-obj/main.rel                              [ main ]
+obj/main.rel                              [ cpct_keyboard ]
 
 
 Libraries Linked                          [ object file ]
 
 /Users/millancastro/Dev/cpctelera/cpctelera/cpctelera.lib
-                                          [ cpct_setPalette_cbindings.rel ]
+                                          [ cpct_setPalette_asmbindings.rel ]
 /Users/millancastro/Dev/cpctelera/cpctelera/cpctelera.lib
-                                          [ cpct_setPALColour_cbindings.rel ]
+                                          [ cpct_setPALColour_asmbindings.re ]
 /Users/millancastro/Dev/cpctelera/cpctelera/cpctelera.lib
-                                          [ cpct_drawSprite_cbindings.rel ]
+                                          [ cpct_drawSprite_asmbindings.rel ]
 /Users/millancastro/Dev/cpctelera/cpctelera/cpctelera.lib
-                                          [ cpct_setVideoMode_cbindings.rel ]
+                                          [ cpct_setVideoMode_asmbindings.re ]
 /Users/millancastro/Dev/cpctelera/cpctelera/cpctelera.lib
                                           [ cpct_removeInterruptHandler.rel ]
 /Users/millancastro/Dev/cpctelera/cpctelera/cpctelera.lib
                                           [ cpc_mode_rom_status.rel ]
 /Users/millancastro/Dev/cpctelera/cpctelera/cpctelera.lib
-                                          [ cpct_getScreenPtr_cbindings.rel ]
+                                          [ cpct_getScreenPtr_asmbindings.re ]
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
 
